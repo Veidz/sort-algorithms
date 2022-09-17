@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 void bubbleSort(int array[], int length);
 void printArray(int array[], int length);
@@ -24,14 +25,21 @@ void printArray(int array[], int length) {
 
 void bubbleSort(int array[], int length) {
   int i, j, aux;
+  bool swap;
 
   for (i = 0; i < length; i++) {
-    for (j = 0; j < (length - 1); j++) {
+    swap = false;
+    for (j = 0; j < (length - 1 - i); j++) {
       if (array[j] > array[j + 1]) {
         aux = array[j];
         array[j] = array[j + 1];
         array[j + 1] = aux;
+        swap = true;
       }
+    }
+
+    if (!swap) {
+      break;
     }
   }
 }
