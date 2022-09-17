@@ -10,7 +10,9 @@ void printArray(int array[], int length);
 
 int main() {
   int *array;
-  int length = 10;
+  int length = 100000; // ~0.10 seconds (0.0016 minutes)
+  int length = 1000000; // ~1 seconds (0.0016 minutes)
+  // int length = 10000000; // ~10 seconds (0.16 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
   
