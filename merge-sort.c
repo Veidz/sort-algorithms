@@ -68,8 +68,9 @@ void mergeSortedArrays(int array[], int start, int middle, int end) {
   int leftLength = middle - start + 1;
   int rightLength = end - middle;
   
-  int auxLeft[leftLength];
-  int auxRight[rightLength];
+  int *auxLeft, *auxRight;
+  auxLeft = (int*)malloc(sizeof(int) * leftLength);
+  auxRight = (int*)malloc(sizeof(int) * rightLength);
   
   int i, j, k;
   
