@@ -8,7 +8,7 @@ void printArray(int array[], int length);
 
 int main() {
   int *array;
-  int length = 100000; // ~4.7 seconds (~0,78 minutes)
+  int length = 100000; // ~4.7 seconds (~0.78 minutes)
   // int length = 1000000; // ~475 seconds (~8 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
