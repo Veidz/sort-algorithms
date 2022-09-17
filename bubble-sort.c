@@ -25,7 +25,7 @@ int main() {
     bubbleSort(array, length);
     clock_t end = clock();
 
-    printf("\n\nSorted Array\n");
+    printf("\nSorted Array\n");
     printArray(array, length);
 
     printf("\n\nElapsed Time: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
