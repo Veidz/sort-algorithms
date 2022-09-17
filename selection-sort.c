@@ -8,22 +8,24 @@ void printArray(int array[], int length);
 
 int main() {
   int *array;
-  int length = 10;
+  int length = 100000; // ~9 seconds (~0.15 minutes)
+  // int length = 1000000; // ~964 seconds (~16 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
 
   if (array != NULL) {
     initializeArray(array, length);
 
-    printf("Original Array\n");
-    printArray(array, length);
+    // printf("Original Array\n");
+    // printArray(array, length);
 
+    printf("\n\nStart Sorting...\n");
     clock_t start = clock();
     insertionSort(array, length);
     clock_t end = clock();
 
-    printf("\n\nSorted Array\n");
-    printArray(array, length);
+    // printf("\n\nSorted Array\n");
+    // printArray(array, length);
 
     printf("\n\nElapsed Time: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
   }
