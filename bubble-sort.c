@@ -1,21 +1,23 @@
 #include <stdio.h>
 
 void bubbleSort(int array[], int length);
+void printArray(int array[], int length);
 
 int main() {
   int array[] = { 5, 3, 1, 8, 0 };
   int length = sizeof(array) / sizeof(array[0]);
-  int i;
 
   printf("Original Array\n");
-  for (i = 0; i < length; i++) {
-    printf("%d ", array[i]);
-  }
+  printArray(array, length);
 
   bubbleSort(array, length);
 
   printf("\n\nSorted Array\n");
-  for (i = 0; i < length; i++) {
+  printArray(array, length);
+}
+
+void printArray(int array[], int length) {
+  for (int i = 0; i < length; i++) {
     printf("%d ", array[i]);
   }
 }
