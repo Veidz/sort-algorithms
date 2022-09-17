@@ -9,7 +9,8 @@ void printArray(int array[], int length);
 
 int main() {
   int *array;
-  int length = 1000;
+  int length = 100000; // ~22 seconds
+  // int length = 1000000; // ~2266 seconds (~37 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
 
@@ -19,6 +20,7 @@ int main() {
     printf("Original Array\n");
     printArray(array, length);
 
+    printf("\n\nStart Sorting...\n");
     clock_t start = clock();
     bubbleSort(array, length);
     clock_t end = clock();
@@ -35,8 +37,9 @@ int main() {
 }
 
 void initializeArray(int *array, int length) {
+  srand(time(NULL));
   for (int i = 0; i < length; i++) {
-    array[i] = i + 1;
+    array[i] = rand() % 10;
   }
 }
 
