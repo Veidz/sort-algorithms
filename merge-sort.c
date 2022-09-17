@@ -17,13 +17,18 @@ int main() {
   if (array != NULL) {
     initializeArray(array, length);
 
-    printf("Original Array\n");
-    printArray(array, length);
+    // printf("Original Array\n");
+    // printArray(array, length);
 
+    printf("\n\nStart Sorting...\n");
+    clock_t start = clock();
     mergeSort(array, length);
-    
-    printf("\nSorted Array\n");
-    printArray(array, length);
+    clock_t end = clock();
+
+    // printf("\nSorted Array\n");
+    // printArray(array, length);
+
+    printf("\n\nElapsed Time: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
   }
   else {
     printf("Memory not allocated\n");
