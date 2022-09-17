@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 void insertionSort(int array[], int length);
 void printArray(int array[], int length);
@@ -10,10 +11,14 @@ int main() {
   printf("Original Array\n");
   printArray(array, length);
 
+  clock_t start = clock();
   insertionSort(array, length);
+  clock_t end = clock();
 
   printf("\n\nSorted Array\n");
   printArray(array, length);
+
+  printf("\n\nElapsed Time: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
 }
 
 void printArray(int array[], int length) {
