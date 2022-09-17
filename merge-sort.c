@@ -1,21 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+void initializeArray(int *array, int length);
 void mergeSort(int array[], int length);
 void mergeSortRecursion(int array[], int start, int end);
 void mergeSortedArrays(int array[], int start, int middle, int end);
 void printArray(int array[], int length);
 
 int main() {
-  int array[] = { 5, 3, 1, 8, 0 };
-  int length = sizeof(array) / sizeof(array[0]);
-  
-  printf("Original Array\n");
-  printArray(array, length);
+  int *array;
+  int length = 10;
 
-  mergeSort(array, length);
+  array = (int*)malloc(sizeof(int) * length);
   
-  printf("\nSorted Array\n");
-  printArray(array, length);
+  if (array != NULL) {
+    initializeArray(array, length);
+
+    printf("Original Array\n");
+    printArray(array, length);
+
+    mergeSort(array, length);
+    
+    printf("\nSorted Array\n");
+    printArray(array, length);
+  }
+  else {
+    printf("Memory not allocated\n");
+    exit(0);
+  }
+}
+
+void initializeArray(int *array, int length) {
+  srand(time(NULL));
+  for (int i = 0; i < length; i++) {
+    array[i] = rand() % 10;
+  }
 }
 
 void printArray(int array[], int length) {
@@ -23,7 +43,6 @@ void printArray(int array[], int length) {
     printf("%d ", array[i]);
   }
 }
-
 
 void mergeSort(int array[], int length) {
   mergeSortRecursion(array, 0, length - 1);
