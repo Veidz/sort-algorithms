@@ -12,8 +12,8 @@ void bubbleSort(int array[], int length);
 
 int main() {
   int *array;
-  int length = 100000; // Disordered = ~21 seconds (~0.36 minutes)/ Ordered = 0 seconds
-  // int length = 1000000; // Disordered = ~2266 seconds (~37 minutes)/ Ordered = 0.003 seconds
+  int length = 100000; // Disordered = ~21 seconds (~0.36 minutes)/ Ordered = ~0 seconds
+  // int length = 1000000; // Disordered = ~2266 seconds (~37 minutes)/ Ordered = ~0.003 seconds
 
   array = (int*)malloc(sizeof(int) * length);
 

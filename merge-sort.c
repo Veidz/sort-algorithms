@@ -13,9 +13,9 @@ void mergeSortedArrays(int array[], int start, int middle, int end);
 
 int main() {
   int *array;
-  int length = 100000; // Disordered = ~0.10 seconds (~0.0016 minutes)/ Ordered = 0.098 seconds (~0.0016 minutes)
-  // int length = 1000000; // Disordered = ~0.97 seconds (~0.016 minutes)/ Ordered = 0.094 seconds (~0.016 minutes)
-  // int length = 10000000; // Disordered = ~10 seconds (~0.16 minutes)/ Ordered = 9.8 seconds (~0.16 minutes)
+  int length = 100000; // Disordered = ~0.10 seconds (~0.0016 minutes)/ Ordered = ~0.098 seconds (~0.0016 minutes)
+  // int length = 1000000; // Disordered = ~0.97 seconds (~0.016 minutes)/ Ordered = ~0.094 seconds (~0.016 minutes)
+  // int length = 10000000; // Disordered = ~10 seconds (~0.16 minutes)/ Ordered = ~9.8 seconds (~0.16 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
 

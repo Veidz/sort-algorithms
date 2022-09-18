@@ -11,8 +11,8 @@ void insertionSort(int array[], int length);
 
 int main() {
   int *array;
-  int length = 100000; // Disordered = ~4.4 seconds (~0.78 minutes)/ Ordered = 0.001 seconds
-  // int length = 1000000; // Disordered = ~475 seconds (~8 minutes)/ Ordered = 0.003 seconds
+  int length = 100000; // Disordered = ~4.4 seconds (~0.78 minutes)/ Ordered = ~0.001 seconds
+  // int length = 1000000; // Disordered = ~475 seconds (~8 minutes)/ Ordered = ~0.003 seconds
 
   array = (int*)malloc(sizeof(int) * length);
 
