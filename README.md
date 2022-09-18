@@ -17,10 +17,12 @@
   <summary>Execution Time</summary><br/>
 
   > 100.000 Registers
-  - ~22 seconds (~0.36 minutes)
+  - Disordered array = ~22 seconds (~0.36 minutes)
+  - Ordered array = ~0 seconds
 
   > 1.000.000 Registers
-  - ~2266 seconds (~37 minutes)
+  - Disordered array = ~2266 seconds (~37 minutes)
+  - Ordered array = ~0.003 seconds
 </details>
 
 ---
@@ -42,10 +44,12 @@
   <summary>Execution Time</summary><br/>
 
   > 100.000 Registers
-  - ~4.7 seconds (~0.07 minutes)
+  - Disordered array = ~4.4 seconds (~0.78 minutes)
+  - Ordered array = ~0.001 seconds
 
   > 1.000.000 Registers
-  - ~475 seconds (~8 minutes)
+  - Disordered array = ~475 seconds (~8 minutes)
+  - Ordered array = ~0.003 seconds
 </details>
 
 ---
