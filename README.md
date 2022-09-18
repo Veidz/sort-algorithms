@@ -100,3 +100,31 @@
   > 100.000.000 Registers
   - ~10 seconds (0.16 minutes)
 </details>
+
+---
+
+## Quick Sort
+<details>
+  <summary>Complexity</summary><br/>
+
+  > Time Complexity
+  - Best Case = O(n*log(n))
+  - Average Case = O(n*log(n))
+  - Worst Case = O(n²)
+
+  > Space Complexity
+  - O(log(n))
+</details>
+
+<details>
+  <summary>Execution Time</summary><br/>
+
+  > 100.000 Registers
+  - ~0.01 seconds (~0.03 minutes)
+
+  > 1.000.000 Registers
+  - ~0.12 seconds (~0.03 minutes)
+
+  > 100.000.000 Registers
+  - ~1.5 seconds (~0.03 minutes)
+</details>
