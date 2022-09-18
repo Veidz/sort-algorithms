@@ -3,7 +3,7 @@
 #include <time.h>
 
 void initializeArray(int *array, int length);
-void swap(int *x, int *y);
+void swap(int x, int y);
 void quickSort(int array[], int length);
 void quickSortRecursion(int array[], int low, int high);
 int partition(int array[], int low, int high);
@@ -11,7 +11,9 @@ void printArray(int array[], int length);
 
 int main() {
   int *array;
-  int length = 10;
+  int length = 100000; // ~0.01 seconds (~0.03 minutes)
+  // int length = 1000000; // ~0.12 seconds (~0.03 minutes)
+  // int length = 10000000; // ~1.5 seconds (~0.03 minutes)
 
   array = (int*)malloc(sizeof(int) * length);
 
@@ -50,10 +52,10 @@ void printArray(int array[], int length) {
   }
 }
 
-void swap(int *x, int *y) {
-  int aux = *x;
-  *x = *y;
-  *y = aux;
+void swap(int x, int y) {
+  int aux = x;
+  x = y;
+  y = aux;
 }
 
 void quickSort(int array[], int length) {
@@ -75,11 +77,11 @@ int partition(int array[], int low, int high) {
 
   for (int j = low; j < high; j++) {
     if (array[j] <= pivotValue) {
-      swap(&array[i], &array[j]);
+      swap(array[i], array[j]);
       i++;
     }
   }
 
-  swap(&array[i], &array[high]);
+  swap(array[i], array[high]);
   return i;
 }
