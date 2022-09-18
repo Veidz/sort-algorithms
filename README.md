@@ -129,11 +129,11 @@
   <summary>Execution Time</summary><br/>
 
   > 100.000 Registers
-  - ~0.01 seconds (~0.03 minutes)
+  - ~0.01 seconds
 
   > 1.000.000 Registers
-  - ~0.12 seconds (~0.03 minutes)
+  - ~0.12 seconds
 
   > 100.000.000 Registers
-  - ~1.5 seconds (~0.03 minutes)
+  - ~1.5 seconds
 </details>
