@@ -108,5 +108,5 @@ void mergeSortedArrays(int array[], int start, int middle, int end) {
       array[k] = auxRight[j];
       j++;
     }
-  }  
+  }
 }

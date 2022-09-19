@@ -132,14 +132,11 @@
   - ~0.01 seconds
 
   > 1.000.000 Registers
-  - ~0.12 seconds
+  - ~0.18 seconds
 
   > 10.000.000 Registers
-  - ~1.5 seconds
+  - ~7.3 seconds
 
   > 100.000.000 Registers
-  - ~17 seconds
-
-  > 1.000.000.000 Registers
-  - ~200 seconds
+  - ~600 seconds
 </details>
